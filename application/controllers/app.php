@@ -40,7 +40,13 @@ class App extends CI_Controller {
 	}
 
 	public function doLogin(){
-		$this->load->view("index");		
+
+        $this->load->model("Blogs");
+        $this->Blogs->blog();
+        
+        
+    
+		//$this->load->view("index");		
 	}
 
 	
