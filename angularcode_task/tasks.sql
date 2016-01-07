@@ -23,3 +23,12 @@ INSERT INTO `tasks` (`id`, `task`, `status`, `created_at`) VALUES
 (3, 'Find bugs', 2, 1390817659),
 (4, 'Test in small devices', 2, 1390818389);
 
+alter table tasks add column created_by int(10);
+alter table tasks add column created_on varchar(20);
+alter table tasks add column updated_by int(10);
+alter table tasks add column updated_on varchar(20);
+alter table tasks drop column created_at;
+alter table tasks add column description varchar(500);
+
+create table user_details (user_id int(10) primary key,first_name varchar(255),last_name varchar(255),email varchar(500),password varchar(200));
+alter table user_details add column role int(10);
