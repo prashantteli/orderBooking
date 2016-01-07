@@ -59,10 +59,12 @@ userDetails.controller('userDetailsController', function($scope, $http) {
        });
   };
   $scope.addUser = function (user) {
-    $http.post("ajax/addTask.php?first_name="+user.first_name+"&last_name="+user.last_name+"&email="+user.email+"&password="+user.password+"&role="+user.role).success(function(data){
-        getTask();
-        $scope.taskInput = "";
-      });
+
+    alert("ajax/addUser.php?first_name="+user.first_name+"&last_name="+user.last_name+"&email="+user.email+"&password="+user.password+"&role="+user.role.name);
+    //$http.post("ajax/addUser.php?first_name="+user.first_name+"&last_name="+user.last_name+"&email="+user.email+"&password="+user.password+"&role="+user.role).success(function(data){
+       //alert(getTask());
+        //$scope.taskInput = "";
+      //});
   };
   $scope.deleteUser = function (task) {
     if(confirm("Are you sure to delete this line?")){
@@ -72,18 +74,15 @@ userDetails.controller('userDetailsController', function($scope, $http) {
     }
   };
    
-   $scope.clickMe=function(){
-    alert(JSON.stringify($scope.user));
-  };
-
   $scope.validateForm=function(){
     if($scope.user.password!=$scope.user.confirm_password){
         alert(JSON.stringify($scope.user));
-    }else if($scope.user.role=="select"){
+    }else if($scope.user.role.name=="select"){
         alert("Invalid Role");
      }  
-    else if($scope.user.role=="select"){
-        alert("Invalid Role");
+    
+    else{
+        $scope.addUser($scope.user);
     }   
   };
 
@@ -94,8 +93,27 @@ userDetails.controller('userDetailsController', function($scope, $http) {
 var loginApp = angular.module('loginApp', []);
 
 loginApp.controller('loginAppController', function($scope, $http) {
-  $scope.clickMe=function(){
+  $scope.login={}
+  $scope.roles=[
+      {name:'Role'},
+      {name:'Developer'},
+      {name:'QA'},
+      {name:'BA'},
+      {name:'Manager'}
+    ];
+
+  $scope.login.role=$scope.roles[0]; 
+  $scope.getUser=function(login){
+    $http.post("ajax/getUser.php?email="+login.username+"&password="+login.password+"&role="+login.role.name).success(function(data){
+      if(data=="1"){
+        window.open('http://localhost/todo/todo.php','_parent');
+      }
+      console.log(data);
+    });
+  }
+  $scope.notToSubmit=function(){
     alert();
+    return false;
   }
 });
 

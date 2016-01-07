@@ -41,17 +41,27 @@
                     </ul>
                     <div id="myTabContent" class="tab-content">
                         <div class="tab-pane active in" id="login">
-                            <form class="" action="todo.php" method="POST" id="loginApp" ng-app="loginApp" ng-controller="loginAppController">
+                            <form class="" action="todo.php" method="POST" id="loginApp" ng-app="loginApp" ng-controller="loginAppController" ng-submit="notToSubmit();">
                                 <fieldset>
                                     <div>
                                         <legend class="">Login</legend>
+                                    </div>
+                                     <div class="form-group">
+                                         <label>Role</label>
+                                         <select class="form-control" ng-options="roles.name for roles in roles" ng-model="login.role" ng-class="classes.role">
+                                            <!-- <option value="select" selected>Role</option>
+                                            <option value="pm">Project Manager</option>
+                                            <option value="dev">Developer</option>
+                                            <option value="qa">QA</option> -->
+                                        </select>
+
                                     </div>
                                     <div class="form-group">
                                         <!-- Username -->
                                         <label class="control-label" for="username">Email</label>
                                         <div class="controls">
-                                            <input type="email" id="username" name="username"
-                                                placeholder="" class="form-control" ng-model="username" >
+                                            <input type="text" id="username" name="username"
+                                                placeholder="" class="form-control" ng-model="login.username" >
                                         </div>
                                     </div>
 
@@ -60,7 +70,7 @@
                                         <label class="control-label" for="password">Password</label>
                                         <div class="controls">
                                             <input type="password" id="password" name="password"
-                                                placeholder="" class="form-control" ng-model="password" ng-click="clickMe()">
+                                                placeholder="" class="form-control" ng-model="login.password">
                                         </div>
                                     </div>
 
@@ -68,7 +78,7 @@
                                     <div class="form-group">
                                         <!-- Button -->
                                         <div class="controls">
-                                            <button class="btn btn-success">Login</button>
+                                            <button class="btn btn-success" type="button" ng-click="getUser(login);">Login</button>
                                         </div>
                                     </div>
                                 </fieldset>

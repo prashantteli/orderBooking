@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
+<?php session_start(); ?>
     <head>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="css/taskman.css"/>
@@ -8,6 +9,7 @@
     <body ng-controller="tasksController">
     <div class="navbar navbar-inverse">
     </div>
+    <?php  print_r($_SESSION['user_details']); ?>
 	<div class="row">
     	<div class="container">
             <br/>
