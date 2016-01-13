@@ -19,34 +19,37 @@ class App extends CI_Controller {
 	 */
 	public function index()
 	{
-			if($this->session->userdata('username')!="" || $this->session->userdata('username')!=null )
+			if($this->session->userdata('username')!="" || $this->session->userdata('password')!=null )
 			{
 				redirect(base_url()."app/dashboard","refresh");
 			}
 			else{
-				$userData=array("username"=>"Prashant","password"=>"abcd");
-				$this->session->set_userdata($userData);
 				redirect(base_url()."app/login","refresh");
 			}
 		
 	}
 
 	public function dashboard(){
-		$this->load->view("index");		
+		if($this->session->userdata('username')!="" || $this->session->userdata('password')!=null ){
+			$data["template"]="dashboard";
+			$this->load->view("index",$data);		
+		}
 	}
 
 	public function login(){
-		$this->load->view("login");
+		$data["message"]="";
+		$this->load->view("login",$data);
 	}
 
 	public function doLogin(){
-
-        $this->load->model("Blogs");
-        $this->Blogs->blog();
-        
-        
-    
-		//$this->load->view("index");		
+		$this->load->model("DBOps");
+        if($this->DBOps->hello()==1){
+        	$this->dashboard();
+        }
+        else{
+        	$data["message"]='<div class="alert alert-danger"alert-dismissible" role="alert" aria-label="Close"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Warning!</strong> Invalid Username or Password</div>';
+	       	$this->load->view("login",$data);	
+        }
 	}
 
 	

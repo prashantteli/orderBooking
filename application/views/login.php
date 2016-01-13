@@ -34,6 +34,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
+                <?php echo $message;?>
                 <div class="login-panel panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">Please Sign In</h3>
