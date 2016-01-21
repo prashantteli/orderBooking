@@ -1,0 +1,372 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />      
+
+    <style>
+      .featured-tabs .nav-tabs {
+        display: block;
+        border-bottom: none;
+        padding-left: 25px;
+      }
+      .featured-tabs .nav-tabs>li {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    padding-left: 50px;
+    border-left: 1px solid #d3d3d3;
+    padding-bottom: 36px;
+}
+.featured-tabs .nav-tabs>li>.number {
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: -15px;
+    left: -35px;
+}
+
+.featured-tabs .nav-tabs>li>.number>i {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: #ff3000;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid #ff3000;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.featured-tabs .nav-tabs>li.active>.number>i {
+    color: #fff;
+    background-color: #ff3000;
+}
+.featured-tabs .nav-tabs>li>.number>i:before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 42px;
+    height: 42px;
+    top: 2px;
+    left: 2px;
+    border: 1px solid #ff3000;
+    border-radius: 50%;
+}
+.featured-tabs .nav-tabs>li.active>a, .featured-tabs .nav-tabs>li.active>a:hover, .featured-tabs .nav-tabs>li.active>a:focus {
+    color: #404040;
+    background-color: transparent;
+    border: none;
+}
+.featured-tabs .nav-tabs>li p {
+    margin-bottom: 0;
+}
+.featured-tabs .nav-tabs>li .social-btns {
+    margin-top: 12px;
+}
+    </style>
+  </head>
+  <body>
+
+
+  <div class="featured-tabs">
+        <div class="row">
+          <div class="col-md-7 col-md-push-5 padding-top-2x space-bottom">
+            <!-- Nav Tabs -->
+            <!-- Add data-autoswitch="true" to enable automatic tabs change. data-interval="4000" - controls the timeout. PLEASE NOTE: autoplay causes some issues with sections with fixed backgrounds. -->
+            <ul class="nav-tabs" role="tablist">
+              <li class="active">
+                <span class="number"><i>1</i></span>
+                <a href="#tab01" role="tab" data-toggle="tab">Registration</a>
+                <p>Atque aliquam, quo minus, sunt animi suscipit, quibusdam accusantium aliquid, repellat officiis iure dolorem.</p>
+                <div class="social-btns">
+                  <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="#" class="sb-instagram" data-toggle="tooltip" data-placement="top" title="" data-original-title="Instagram">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                  <a href="#" class="sb-dropbox" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dropbox">
+                    <i class="fa fa-dropbox"></i>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <span class="number"><i>2</i></span>
+                <a href="#tab02" role="tab" data-toggle="tab">Short Introduction</a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aliquam, quo minus, sunt animi suscipit, quibusdam accusantium aliquid, repellat officiis iure. Dolorem quis dolores.</p>
+              </li>
+              <li>
+                <span class="number"><i>3</i></span>
+                <a href="#tab03" role="tab" data-toggle="tab">Receive Feedback</a>
+                <p>Molestias, non nulla placeat odio, qui dicta alias, numquam quo rerum asperiores eos, fuga maiores odit quae laborum.</p>
+              </li>
+            </ul><!-- .nav-tabs -->
+          </div><!-- .col-md-7.col-md-push-5 -->
+          <div class="col-md-5 col-md-pull-7">
+            <!-- Tab Panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane transition fade right in active" id="tab01">
+                <img src="img/home/featured-tabs/01.png" class="block-center" alt="Tab">
+              </div>
+              <div role="tabpanel" class="tab-pane transition fade scale" id="tab02">
+                <img src="img/home/featured-tabs/02.png" class="block-center" alt="Tab">
+              </div>
+              <div role="tabpanel" class="tab-pane transition fade flip" id="tab03">
+                <img src="img/home/featured-tabs/03.png" class="block-center" alt="Tab">
+              </div>
+            </div><!-- .tab-content -->
+          </div><!-- .col-md-7.col-md-push-5 -->
+        </div><!-- .row -->
+      </div>
+
+
+
+      <div class="features-tabs">
+    <div class="row">
+      <div class="col-sm-12">
+
+       <!-- TABS -->
+       <div class="tabbable tabs-top-horizontal">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#managed" data-toggle="tab" aria-expanded="true"><i class="fa fa-life-ring royalblue"></i>Fully Managed</a></li>
+          <li class=""><a href="#security" data-toggle="tab" aria-expanded="false"><i class="fa fa-shield green"></i>Security</a></li>
+          <li class=""><a href="#backups" data-toggle="tab" aria-expanded="false"><i class="fa fa-archive red"></i>Backups</a></li>
+          <li class=""><a href="#emails" data-toggle="tab" aria-expanded="false"><i class="fa fa-envelope-square lightblue"></i>E-mails</a></li>
+          <li class=""><a href="#monitoring" data-toggle="tab" aria-expanded="false"><i class="fa fa-th-list orange"></i>Monitoring</a></li>
+          <li class=""><a href="#cdn" data-toggle="tab" aria-expanded="false"><i class="fa fa-maxcdn darkgray"></i>CDN</a></li>
+        </ul>
+        <div class="tab-content">
+
+         <div class="tab-pane fade active in" id="managed">
+           <h4>LETTING US MANAGE YOUR SERVER</h4>
+           <p class="subtitle">Indicator communities positive social change respect sustainability campaign. Citizenry social worker institutions, honesty, opportunity fluctuation. Transform, social analysis, developing, dedicated countries.</p>
+
+           <div class="row spacing-25">
+            <div class="col-md-11 col-sm-12 center-block">
+
+              <div class="block-grid-sm-3 block-grid-xs-1 fully-managed">
+
+                <div class="block-grid-item">
+                  <img src="images/icon1.png" alt="">
+                  <h5>OS UPDATES</h5>
+                  <p>Indicator communities positive social change respect sustainability campaign. Citizenry social worker.</p>
+                </div>
+
+                <div class="block-grid-item">
+                  <img src="images/icon2.png" alt="">
+                  <h5>24/7/365 SUPPORT</h5>
+                  <p>Indicator communities positive social change respect sustainability campaign. Citizenry social worker.</p>
+                </div>
+
+                <div class="block-grid-item">
+                 <img src="images/icon3.png" alt="">
+                 <h5>100% UPTIME SLA</h5>
+                 <p>Indicator communities positive social change respect sustainability campaign. Citizenry social worker.</p>
+               </div>
+
+               <div class="block-grid-item">
+                <img src="images/icon4.png" alt="">
+                <h5>FAILOVER SYSTEMS</h5>
+                <p>Indicator communities positive social change respect sustainability campaign. Citizenry social worker.</p>
+              </div>
+
+              <div class="block-grid-item">
+                <img src="images/icon5.png" alt="">
+                <h5>REMOTE BACKUPS</h5>
+                <p>Indicator communities positive social change respect sustainability campaign. Citizenry social worker.</p>
+              </div>
+
+              <div class="block-grid-item">
+               <img src="images/icon6.png" alt="">
+               <h5>MANAGED SECURITY</h5>
+               <p>Indicator communities positive social change respect sustainability campaign. Citizenry social worker.</p>
+             </div>
+
+           </div>
+         </div>
+       </div>
+
+     </div>
+
+     <div class="tab-pane fade" id="security">
+       <h4>SECURE WEB HOSTING SOLUTIONS</h4>
+       <div class="row">
+            <div class="col-sm-12">
+      <div class="block-grid-sm-3 block-grid-xs-1 security">
+
+                <div class="block-grid-item">
+                  <div class="security-tab-icon">
+                  <i class="fa fa-expeditedssl"></i>
+                  </div>
+                  <div class="security-tab-feature">
+                  <h5>PREVENTION OF ATTACKS</h5>
+                  <p>Indicator communities positive social change respect sustainability campaign.</p>
+                  </div>
+                </div>
+
+                <div class="block-grid-item">
+                  <div class="security-tab-icon">
+                  <i class="fa fa-file-text"></i>
+                  </div>
+                  <div class="security-tab-feature">
+                  <h5>VULNERABILITY REPORTS</h5>
+                  <p>Indicator communities positive social change respect sustainability campaign.</p>
+                  </div>
+                </div>
+
+                 <div class="block-grid-item">
+                  <div class="security-tab-icon">
+                  <i class="fa fa-key"></i>
+                  </div>
+                  <div class="security-tab-feature">
+                  <h5>HARDENING SYSCTL</h5>
+                  <p>Indicator communities positive social change respect sustainability campaign.</p>
+                  </div>
+                </div>
+
+                <div class="block-grid-item">
+                  <div class="security-tab-icon">
+                  <i class="fa fa-umbrella"></i>
+                  </div>
+                  <div class="security-tab-feature">
+                  <h5>SECURITY AUDIT</h5>
+                  <p>Indicator communities positive social change respect sustainability campaign.</p>
+                  </div>
+                </div>
+
+                <div class="block-grid-item">
+                  <div class="security-tab-icon">
+                  <i class="fa fa-life-ring"></i>
+                  </div>
+                  <div class="security-tab-feature">
+                  <h5>VERIFICATION OF LOG FILES</h5>
+                  <p>Indicator communities positive social change respect sustainability campaign.</p>
+                  </div>
+                </div>
+
+                 <div class="block-grid-item">
+                  <div class="security-tab-icon">
+                 <i class="fa fa-diamond"></i>
+                  </div>
+                  <div class="security-tab-feature">
+                  <h5>CONFIGURED FIREWALL</h5>
+                  <p>Indicator communities positive social change respect sustainability campaign.</p>
+                  </div>
+                </div>
+
+
+           </div>
+     </div>
+     </div>
+     </div>
+
+     <div class="tab-pane fade" id="backups">
+       <h4>SITE BACKUPS &amp; RESTORE</h4>
+       <p class="subtitle">Indicator communities positive social change respect sustainability campaign. Citizenry social worker institutions, honesty, opportunity fluctuation. Transform, social analysis, developing, dedicated countries.</p>
+
+       <div class="row spacing-25">
+       <div class="col-md-11 col-sm-12 center-block">
+       <div class="row no-gutter">
+       <div class="backups-restore">
+       <div class="col-sm-3 backupcolumn">
+       <h5 class="blue">High Performance Backup</h5>
+       <p>Necessities momentum raise awareness; experience in the field countries fight against malnutrition empower civic engagement immunize</p>
+       </div>
+       <div class="col-sm-3 backupcolumn">
+       <h5 class="purple">Data Retention Policy</h5>
+       <p>Mobilize assessment expert strengthen democracy public institutions; non-partisan honor gender equality voice. Local synthesize, empowerment</p>
+       </div>
+        <div class="col-sm-3 backupcolumn">
+       <h5 class="orange">Central Backup Repository</h5>
+       <p>Dignity economic security, freedom international carbon emissions reductions. Climate change, Aga Khan, challenges The Elders sanitation</p>
+       </div>
+        <div class="col-sm-3 backupcolumn">
+       <h5 class="lightblue">Simultaneous Restores</h5>
+       <p>Crowdsourcing raise awareness public sector safety, breakthrough insights harness expanding community ownership. Medecins du Monde</p>
+       </div>
+       </div>
+       </div>
+       </div>
+</div>
+     </div>
+
+
+     <div class="tab-pane fade" id="emails">
+       <h4>EMAIL HOSTING SERVICES</h4>
+       <div class="row spacing-25">
+        <div class="col-md-6 col-sm-12"><img src="images/mail2.jpg" alt=""></div>
+
+       <div class="col-md-6 col-sm-12"> <p>Necessities momentum raise awareness; experience in the field countries fight against malnutrition empower civic engagement immunize.</p>
+       <p>Visionary employment voice gender equality development social challenges community meaningful connect. Metrics human being accessibility collaborative shifting landscape social.</p>
+
+       <ul>
+        <li><i class="fa fa-long-arrow-right"></i> POP/IMAP/Webmail</li>
+        <li><i class="fa fa-long-arrow-right"></i> Collaboration tools</li>
+        <li><i class="fa fa-long-arrow-right"></i> Anti-spam protection</li>
+        <li><i class="fa fa-long-arrow-right"></i> Full mobile support</li>
+      </ul></div>
+
+        </div>
+     </div>
+
+     <div class="tab-pane fade" id="monitoring">
+      <h4>24x7 MONITORING</h4>
+     <div class="row spacing-25">
+             <div class="col-md-6 col-sm-12"><img src="images/monitoring-tab-image.png" alt=""></div>
+
+       <div class="col-md-6 col-sm-12"> <p>Mobilize assessment expert strengthen democracy public institutions; non-partisan honor gender equality voice. Local synthesize, empowerment.</p>
+       <p>Innovation smart cities, necessities, catalyze network facilitate assessment expert. Legal aid philanthropy celebrate amplify, fight against oppression, Bill and Melinda Gates asylum.</p>
+
+       <ul>
+        <li><i class="fa fa-long-arrow-right"></i> Crowdsourcing raise</li>
+        <li><i class="fa fa-long-arrow-right"></i> Expanding community</li>
+        <li><i class="fa fa-long-arrow-right"></i> Insights harness</li>
+        <li><i class="fa fa-long-arrow-right"></i> Sector safety</li>
+      </ul></div>
+
+        </div>
+        </div>
+
+     <div class="tab-pane fade" id="cdn">
+       <h4>STOP TO SLOW LOADING SITES</h4>
+
+      <div class="row spacing-25">
+             <div class="col-md-6 col-sm-12"><img src="images/cdn-tab-image.png" alt=""></div>
+
+       <div class="col-md-6 col-sm-12"> <p>Mobilize assessment expert strengthen democracy public institutions; non-partisan honor gender equality voice. Local synthesize, empowerment.</p>
+       <p>Innovation smart cities, necessities, catalyze network facilitate assessment expert. Legal aid philanthropy celebrate amplify, fight against oppression, Bill and Melinda Gates asylum.</p>
+
+       <ul>
+        <li><i class="fa fa-long-arrow-right"></i> Crowdsourcing raise</li>
+        <li><i class="fa fa-long-arrow-right"></i> Expanding community</li>
+        <li><i class="fa fa-long-arrow-right"></i> Insights harness</li>
+        <li><i class="fa fa-long-arrow-right"></i> Sector safety</li>
+      </ul></div>
+
+        </div>
+        </div>
+   </div>
+ </div>
+ <!-- END OF TABS -->
+
+</div>
+</div>
+</div>
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+    </body>
+  </html>

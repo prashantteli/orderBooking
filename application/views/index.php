@@ -42,7 +42,7 @@
 
         <div id="page-wrapper">
         <?php
-            $this->load->view($template);   
+            $this->load->view($template,$content);   
         ?>
 
         </div>

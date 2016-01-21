@@ -47,10 +47,10 @@
                                 <a href="#">View Orders</a>
                             </li>
                             <li>
-                                <a href="#">Add Client</a>
+                                <a href="addClient">Add Client</a>
                             </li>
                             <li>
-                                <a href="#">View clients</a>
+                                <a href="viewClients">View clients</a>
                             </li>
                         </ul>
                     </li>                   
@@ -64,10 +64,10 @@
                                 <a href="#">View Orders</a>
                             </li>
                             <li>
-                                <a href="#">Add Supplier</a>
+                                <a href="addSupplier">Add Supplier</a>
                             </li>
                             <li>
-                                <a href="#">View clients</a>
+                                <a href="viewSuppliers">View Suppliers</a>
                             </li>
                         </ul>
                     </li>                   

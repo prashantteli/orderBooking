@@ -2,10 +2,10 @@
 	<!-- Page Heading -->
 	<div class="row">
 		<div class="col-lg-12">
-			<h1 class="page-header">Clients</h1>
+			<h1 class="page-header">Suppliers</h1>
 			<ol class="breadcrumb">
-				<li class="">Sales</li>
-				<li class="active">Client</li>
+				<li class="">Purchase</li>
+				<li class="active">Supplier</li>
 			</ol>
 		</div>
 	</div>
@@ -14,10 +14,10 @@
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Add Client</h3>
+					<h3 class="panel-title">Add Supplier</h3>
 				</div>
 				<div class="panel-body">
-					<form action="saveClient" method="post">
+					<form action="saveSupplier" method="post">
 						<div class="row">
 							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 								<div class="form-group">
